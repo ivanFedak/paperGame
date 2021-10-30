@@ -1,0 +1,66 @@
+
+
+.content
+    display: none
+    @include adaptiv-value('padding-top', 80, 65, 1)
+    padding-bottom: 30px
+    &__container
+    &__body
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        @media (max-width: $md3 + px) //Less 768
+           grid-template-columns: repeat(2, 1fr)
+    &__column
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        &_you
+            @media (min-width: $md3 + px)//More 768
+                order: 1
+        &_house
+            @media (min-width: $md3 + px)//More 768
+                order: 3
+        &_result
+            @media (min-width: $md3 + px)//More 768  
+                order: 2
+            @media (max-width: $md3 + px) //Less 768
+                margin-top: 35px
+                grid-column: span 2
+
+    &__title
+        flex: 1 1 auto
+        @include adaptiv-value('font-size', 22, 17, 1)
+        text-align: center
+        text-shadow: 4px 3px 5px rgba(0, 0, 0, 0.533)
+        &:not(:last-child)
+            @include adaptiv-value('margin-bottom', 55, 10, 1)
+    &__item //in Ui
+    &__result
+.result-content
+    &__title
+        @include adaptiv-value('font-size', 55, 40, 1)
+        font-weight: 700
+        &:not(:last-child)
+            margin-bottom: 50px/50px * 1em
+        @media (max-width: $md3 + px) //Less 768
+           &:not(:last-child)
+               margin-bottom: 10px
+    &__btn
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        text-align: center
+        @include adaptiv-value('min-width', 220, 160, 1)
+        padding: 12px 24px
+        background: #fff
+        border-radius: 6px
+        transition: all 0.3s ease 0s
+        
+        color: hsl(229, 25%, 31%)
+        @media (any-hover: hover )
+           &:hover
+              background: hsl(229, 25%, 31%)
+              transform: translate3d(0px, -2px, 0px)
+              color: #fff

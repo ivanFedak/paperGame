@@ -1,0 +1,33 @@
+.header
+    @include adaptiv-value('padding-top', 50, 30, 1)
+    &__container 
+    &__body 
+        border-radius: 15px
+        @include adaptiv-value('padding', 25, 15, 1)
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border: 1px solid #fff
+    &__logo 
+        @include adaptiv-value('width', 160, 95, 1)
+        img
+            width: 100%
+            height: 100%
+    &__score
+        @include adaptiv-value('min-width', 150, 80, 1)
+        @include adaptiv-value('min-height', 115, 70, 1)
+
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+        background: #fff
+        border-radius: 8px
+    &__label 
+        color: #2a45c2
+        text-transform: uppercase
+    &__number 
+        color: #565468
+        font-weight: 700
+        @include adaptiv-value('font-size', 50, 35, 1)

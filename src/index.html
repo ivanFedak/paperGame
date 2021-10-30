@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landing</title>
+    <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+<body>
+  
+    <div class="wrapper">
+
+        
+        <header class="header">
+            <div class='header__container _container'>
+                <div class="header__body">
+                    <div class="header__logo">
+                        <img src="./assets/img/logo.svg" alt="logo">
+                    </div>
+                    <div class="header__score">
+                        <div class="header__label">Счёт</div>
+                        <div class="header__number">0</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="page">
+            
+            <div class="page__main main" >
+                <div class='main__container _container'>
+                    <div class="main__body">
+
+                            <div data-name="paper" class="main__item  hand hand_papper">
+                                <img src="./assets/img/icon-paper.svg" alt="">
+                            </div>
+                            <div data-name="scissors" class="main__item  hand hand_scissors">
+                                <img src="./assets/img/icon-scissors.svg" alt="">
+                            </div>
+                            <div data-name="rock" class="main__item  hand hand_rock">
+                                <img src="./assets/img/icon-rock.svg" alt="">
+                            </div>
+
+                            <div class="main__image">
+                                <img src="./assets/img/bg-triangle.svg" alt="">
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="page__contnet content">
+                <div class='content__container _container'>
+                    <div class="content__body">
+
+                        <div class="content__column content__column_you">
+                            <div class="content__title">Ты</div>
+                            <div class="content__item hand">
+                                <img src="./assets/img/icon-paper.svg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="content__column content__column_house">
+                            <div class="content__title">Искуственый интелект</div>
+                            <div class="content__item hand">
+                                <img src="./assets/img/icon-rock.svg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="content__column content__column_result result-content">
+                            <div class="result-content__title">You Win</div>
+                            <button class="result-content__btn">Play Again</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </main>
+
+        <footer class="footer">
+            <div class="page__rules rules">
+                <div class="rules__btns">
+                    <button class="rules__btn">Rules</button>
+                </div>
+            </div>
+
+        </footer>
+
+
+    </div>
+
+
+<!-- Modals and all the stuff -->
+
+    <script src="script.js"></script>
+</body>
+</html>

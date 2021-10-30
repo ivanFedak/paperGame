@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap');
+
+//-----fonts--------//
+
+// font-family: Roboto, sans-serif (300, 500, 700, 900)
+
+
+
+//ctr + shift + p
+
+//&display=swap
+
+
+
+@import './services/mixins'
+@import './services/icons'
+// $maxWidth: 1440
+
+$maxWidthContainer: 960 + 30
+//+ 30px
+  
+  
+$md1: $maxWidthContainer + 12
+$md2: 991.98 
+$md3: 767.98
+$md4: 479.98
+
+
+$mainColor: #ffffff
+
+
+
+
+
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  font-family: Barlow, sans-serif;
+  font-size: 16px
+  font-weight: 600
+  text-transform: uppercase
+  color: $mainColor
+
+
+html,body
+  height: 100%
+
+
+  
+
+
+
+  
+._container
+  max-width: $maxWidthContainer + px
+  padding: 0 15px
+  margin: 0 auto
+
+.wrapper 
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(134.34% 134.34% at 50% 0%, #1f3757 0%,#131537 100%)
+
+.page 
+	flex: 1 1 auto;
+
+// ----------Default settings
+@import './services/default'
+
+
+
+@import './modules/ui' 
+
+//-----------Componets import-----------------\\
+
+  
+@import './modules/burger' 
+@import './components/header'
+@import './components/main'
+@import './components/contnet'
+@import './components/rules'
+
+
+//-----------Componets import-----------------\\
+

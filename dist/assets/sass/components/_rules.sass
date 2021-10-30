@@ -1,0 +1,36 @@
+
+
+.rules 
+    padding: 40px
+    &__btns 
+        display: flex
+        justify-content: flex-end
+        flex-wrap: wrap
+        @media (max-width: $md3 + px) //Less 768
+            justify-content: center
+            flex-direction: column
+
+    &__btn 
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        text-align: center
+        min-width: 130px
+        padding: 13px 0
+        background: none
+        border-radius: 15px
+        border: 3px solid #fff
+        transition: all 0.3s ease 0s
+        
+        text-transform: uppercase
+        &:not(:last-child)
+            margin-right: 10px
+        @media (max-width: $md3 + px) //Less 768
+            flex: 1 1 100%
+            &:not(:last-child)
+                margin: 0 0 10px 0
+        @media (any-hover: hover )
+           &:hover
+               background: #fff
+               color: #000
