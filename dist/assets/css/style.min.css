@@ -740,4 +740,42 @@ body.ie ._ibg img {
 .modal_active {
   top: 0;
 }
+
+.active_item {
+  -webkit-box-shadow: 0 0 0 #aeaeae66;
+          box-shadow: 0 0 0 #aeaeae66;
+  -webkit-animation: pulse 1.5s infinite;
+          animation: pulse 1.5s infinite;
+  -webkit-animation: pulse 1s infinite;
+          animation: pulse 1s infinite;
+  -webkit-animation: pulse 1.4s infinite;
+          animation: pulse 1.4s infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #d5d5d566;
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 40px #bababa00;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 #bdbdbd00;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #80808066;
+            box-shadow: 0 0 0 0 #80808066;
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 40px #71717100;
+            box-shadow: 0 0 0 40px #71717100;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 #51504f00;
+            box-shadow: 0 0 0 0 #51504f00;
+  }
+}
 /*# sourceMappingURL=style.min.css.map */

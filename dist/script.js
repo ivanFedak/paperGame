@@ -3510,18 +3510,25 @@ var game = function game() {
     if (result == 'Ты проиграл!') {
       picked.style.cssText = 'border-color: #E3414F';
       pcRand.style.cssText = 'border-color: #1C9E42'; //Green
+
+      pcRand.classList.add('active_item');
+      picked.classList.remove('active_item');
     }
 
     if (result == 'Ты выиграл!') {
       picked.style.cssText = 'border-color: #1C9E42';
       pcRand.style.cssText = 'border-color: #E3414F'; //Red
 
+      picked.classList.add('active_item');
+      pcRand.classList.remove('active_item');
       score++;
     }
 
     if (result == 'Ничья!') {
       picked.style.cssText = 'border-color: orange';
       pcRand.style.cssText = 'border-color: orange';
+      picked.classList.add('active_item');
+      pcRand.classList.add('active_item');
     } ///
 
 
