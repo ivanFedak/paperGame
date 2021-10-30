@@ -3337,6 +3337,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_default__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./services/default */ "./src/js/services/default.js");
 /* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/burger */ "./src/js/modules/burger.js");
 /* harmony import */ var _modules_game__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/game */ "./src/js/modules/game.js");
+/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/modal */ "./src/js/modules/modal.js");
+
 
 
  // import getResource from './services/request'
@@ -3344,6 +3346,7 @@ __webpack_require__.r(__webpack_exports__);
 window.onload = function () {
   Object(_services_default__WEBPACK_IMPORTED_MODULE_0__["default"])();
   Object(_modules_burger__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  Object(_modules_modal__WEBPACK_IMPORTED_MODULE_3__["default"])();
   Object(_modules_game__WEBPACK_IMPORTED_MODULE_2__["default"])();
 };
 
@@ -3430,7 +3433,8 @@ var game = function game() {
   resText = document.querySelector('.result-content__title'),
       //Desicion
   btnRestar = document.querySelector('.result-content__btn'),
-      ScoreNum = document.querySelector('.header__number'); //Desicion
+      //Play Again
+  ScoreNum = document.querySelector('.header__number'); //Desicion
 
   items.forEach(function (hand) {
     hand.addEventListener('click', function () {
@@ -3533,6 +3537,44 @@ var game = function game() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (game);
+
+/***/ }),
+
+/***/ "./src/js/modules/modal.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/modal.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var modalWindow = function modalWindow() {
+  var btn = document.querySelector('.rules__btn'),
+      closeBtn = document.querySelector('.modal__close'),
+      modal = document.querySelector('.modal');
+
+  function closeModal(e) {
+    if (!e.target.closest('.modal__body') && !e.target.closest('.rules__btn')) {
+      modal.classList.remove('modal_active');
+      document.body.classList.remove('_lock');
+    }
+
+    if (e.target.closest('.modal__close')) {
+      modal.classList.remove('modal_active');
+      document.body.classList.remove('_lock');
+    }
+  }
+
+  btn.addEventListener('click', function (e) {
+    modal.classList.add('modal_active');
+    document.body.classList.add('_lock');
+  });
+  document.addEventListener('click', closeModal);
+  closeBtn.addEventListener('click', closeModal);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (modalWindow);
 
 /***/ }),
 

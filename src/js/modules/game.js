@@ -6,7 +6,7 @@ const game = ()=>{
           picked = document.querySelector('.content__column_you .content__item'),//User (Wrapper for img )
           pcRand = document.querySelector('.content__column_house .content__item'), //Pc 
           resText = document.querySelector('.result-content__title'),//Desicion
-          btnRestar = document.querySelector('.result-content__btn'),
+          btnRestar = document.querySelector('.result-content__btn'),//Play Again
           ScoreNum = document.querySelector('.header__number');//Desicion
 
  
@@ -20,6 +20,7 @@ const game = ()=>{
         //hide the current page
         mainBlock.style.display = 'none'
         contentBlock.style.display = 'block'
+
         //
 
         console.log(hand.dataset.name)//What we choose

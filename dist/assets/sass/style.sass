@@ -59,6 +59,7 @@ html,body
   margin: 0 auto
 
 .wrapper 
+  position: relative
   min-height: 100%;
   overflow: hidden;
   display: flex;
@@ -67,6 +68,9 @@ html,body
 
 .page 
 	flex: 1 1 auto;
+
+._lock
+  overflow: hidden
 
 // ----------Default settings
 @import './services/default'
@@ -83,6 +87,7 @@ html,body
 @import './components/main'
 @import './components/contnet'
 @import './components/rules'
+@import './modules/modal'
 
 
 //-----------Componets import-----------------\\
